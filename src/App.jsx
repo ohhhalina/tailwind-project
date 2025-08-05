@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './Components/Hero'
+import Button from './Components/Button'
 
 const App = () => {
   return (
