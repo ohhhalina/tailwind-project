@@ -6,13 +6,20 @@ const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 4;
+  const totalVideos = 4; // видео 
   const nextVideoRef = useRef(null);
 
   const handleVideoLoad = () => {
     setLoadedVideos((prev) => prev + 1);
     setIsLoading(false);
   };
+
+  // 0 % 4 = 0 + 1 => 1
+  // 1 % 4 = 1 + 1 => 2
+  // 2 % 4 = 2 + 1 => 3
+  // 3 % 4 = 3 + 1 => 4
+  // 4 % 4 = 0 + 1 => 1
+  const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -52,7 +59,7 @@ const Hero = () => {
             >
               <video
                 ref={nextVideoRef}
-                src={getVideoSrc(currentIndex + 1)}
+                src={getVideoSrc(upcomingVideoIndex)}
                 loop
                 muted
                 id="current-video"
@@ -63,6 +70,27 @@ const Hero = () => {
               />
             </div>
           </div>
+
+            <video
+            ref={nextVideoRef}
+            src={getVideoSrc(currentIndex)}
+            loop
+            muted
+            id='next-video'
+            className='absolute-center invisible absolute z-20
+            size-64 object-cover object-center'
+            onLoadedData={handleVideoLoad}
+            />
+            <video
+            src={getVideoSrc(currentIndex === totalVideos -1
+               ? 1 : currentIndex)}
+            autoPlay
+            loop
+            muted
+            className='absolute left-0 top-0 size-full object-cover
+            object-center'
+            />
+
         </div>
       </div>
     </div>
