@@ -1,9 +1,9 @@
 {
-  "homepage": "https://ohhhalina.github.io/tailwind-project",
   "name": "power",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ohhhalina.github.io/tailwind-project",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,6 +13,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0"
