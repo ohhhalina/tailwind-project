@@ -13,8 +13,17 @@ const AnimatedTitle = ({title, containerClass}) => {
                     end: 'center center',
                     toggleActions: 'play none none reverse'
                 }
+            });
+
+            titleAnimation.to('.animated-word', {
+                opacity: 1,
+                transform: 'translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)',
+                ease: 'power1.inOut',
+                stagger: 0.002,
             })
         }, containerRef)
+
+        return () => ctx.revert();
     }, []);
 
   return (
