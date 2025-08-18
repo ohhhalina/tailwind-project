@@ -6,6 +6,9 @@ const navItems = ['Nexus', 'Vault', 'Prologue', 'About', 'Contact']
 
 const Navbar = () => {
     const navContainerRef = useRef(null);
+    const audioElement = useRef(null)
+
+    const toggleAudioIndicator = () => {}
 
   return (
     <div ref={navContainerRef} className='fixed inset-x-0
@@ -31,13 +34,16 @@ const Navbar = () => {
     <div className='flex h-full items-center'>
         <div className='hidden md:block'>
     {navItems.map((item) => (
-        <a className='nav-hover-btn'>
+        <a key={item} href={`#${item.toLowerCase ()}`} className='nav-hover-btn'>
             {item}
         </a>
-    ))}
+        ))}
         </div>
-    </div>
 
+        <button className='ml-10 flex items-center space-x-0.5'>
+
+        </button>
+    </div>
     </nav>
     </header>
       
