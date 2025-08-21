@@ -18,8 +18,6 @@ const tiltY = (relativeY - 0.5) * -5;
 
 const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.95, .95, .95)`;
     setTransformStyle(newTransform);
-
-    setTransformStyle('')
 }
 
 const handleMouseLeave = () => {
