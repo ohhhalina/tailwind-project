@@ -69,7 +69,7 @@ const Navbar = () => {
     <nav className='flex size-full items-center
     justify-between p-4'>
     <div className='flex items-center gap-7'>
-    <img src="/img/logo.png" alt="logo"
+    <img src="img/logo.png" alt="logo"
     className='w-10' />
 
     <button 
@@ -91,7 +91,7 @@ const Navbar = () => {
         </div>
 
         <button className='ml-10 flex items-center space-x-0.5' onClick={toggleAudioIndicator}>
-        <audio src="/audio/loop.mp3" ref={audioElementRef} className='hidden' loop />
+        <audio src="audio/loop.mp3" ref={audioElementRef} className='hidden' loop />
         
         {[1, 2, 3, 4].map((bar) => (
             <div key={bar} className={`indicator-line ${isIndicatorActive ? 'active' : ''}`} 
