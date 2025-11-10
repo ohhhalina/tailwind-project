@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ohhhalina.github.io/tailwind-project",
+  "homepage": "https://ohhhalina.github.io/tailwind-project/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
